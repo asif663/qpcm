@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<link href="../static/bs3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<br/>
+<h2 align = "center" style="color:lightseagreen;"> Club Information</h2> <br/><br/>
+<div class="col-lg-6"> 
+                      
+  <form method="post" action="{{url}}"> <table class="table table-striped"><tr>
+  		{% csrf_token %}
+		<td>Name*</td><td>:</td><td>{{form.name}}<span id="Errd"></span></td></tr>		       
+		<tr><td>Mac Id</td><td>:</td><td>{{form.ip}}</td></tr>      
+		<tr></tr>
+		<tr><td><td><td><button type="submit" class="btn btn-primary" onclick="return executiveValidate()">Submit</button> </td></tr></table>
+		<input type="hidden" name="cid" value="{{cid}}" />
+	</form>
+
+	<input type="button" value="Cancel" style="margin-top: -63px;
+margin-left: 323px;
+padding: 11px;
+background: #C58482;
+border: #1fb5ad;
+border-radius: 9px 9px 9px;
+color: white;
+cursor: pointer;" onclick="window.close()">
+			  
+</div>
+
+<script src="../static/js/lib/jquery.js"></script>
+<script type="text/javascript">
+ function executiveValidate()
+{
+ var a = $("#id_name").val();
+ 
+ is_error=false;
+
+
+    if(a == "")
+     {
+       errmsg = "Please Enter Club Name";
+       is_error = true;  
+       document.getElementById("Errd").style.color="red";
+       $("#Errd").html(errmsg);
+       $("#id_name").focus();
+       
+     }
+
+ if(is_error)
+    {
+      return false;
+    }
+    else
+    {
+     return true;
+    }
+}
+</script>
+
+</html>

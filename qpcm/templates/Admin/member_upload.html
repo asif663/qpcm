@@ -1,0 +1,49 @@
+{% extends 'Admin/admin_base.html' %}
+
+{% block jquery %}
+$('#load').hide();
+$('#b1').on('click',function(){
+$('#load').show();
+});
+{% endblock %}
+
+  {% block content %}
+
+  <section id="main-content" >
+        <section class="wrapper">
+
+            <div class="row">
+           
+
+            <div class="col-lg-12">
+            <!--tab nav start-->
+            <section class="panel">
+                <header class="panel-heading tab-bg-dark-navy-blue ">
+
+                <p style="color:green">{{message}}</p>
+
+<form action="/member_upload/" method="post" enctype="multipart/form-data">{% csrf_token %}
+<h5 style="color:cadetblue;">Upload Member Data</h5>
+<input type="file" name="excel"><br />
+<input class = "btn btn-primary" id = "b1" type="submit" name="submit" value="Upload">
+<div align='center' id='load'>
+<img src="{{STATIC_URL}}images/ajax-loader.gif" />
+</div>
+</form>
+
+
+            </section>
+
+            </div>
+
+            </div>
+
+
+        </section>
+    </section>
+    <!--main content end-->
+
+
+
+
+{%endblock content%}

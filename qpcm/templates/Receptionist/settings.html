@@ -1,0 +1,437 @@
+{% extends 'Receptionist/recep_base.html' %}
+ {% block content %}
+
+<!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content" >
+        <section class="wrapper">
+           
+            
+          
+
+            <div class="row">
+           
+
+            <div class="col-lg-12">
+            <!--tab nav start-->
+            <section class="panel">
+                <header class="panel-heading tab-bg-dark-navy-blue ">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#home">My Profile</a>
+                        </li>
+                        <!-- <li class="">
+                            <a data-toggle="tab" href="#about">QP Bulk Upload</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#profile">Associated Companies</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#contact">Email Notification</a>
+                        </li>
+						<li class="">
+                            <a data-toggle="tab" href="#Others">Others</a>
+                        </li> -->
+                    </ul>
+                </header>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane active"><br><br>
+                            <div class="tab-pane fade active in" id="profile">
+                  <div class="col-lg-12">
+				  <div class="row">
+				  <div class="col-lg-3 text-center">
+				  <img src="../static/img/people.jpg" height="100px" width="100px"><br/><br/><br/><br/><br/>					
+					<!-- <button type="submit" class="btn btn-primary">Edit Profile</button>            -->
+				  </div>
+				  <div class="col-lg-4 text-left">
+				  <!-- <h4>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small class="text-right">Mohammed</small></h4>
+				  <h4>Organization &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small class="text-right">QP</small></h4>
+				  <h4>Martial Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small class="text-right">Married</small></h4>
+				  <h4>Nationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Indian</small></h4>
+				  <h4>Work Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Dhukhan</small></h4>
+				  <h4>Office Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>012332112</small></h4>
+				  <h4>Mobile No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>1234123</small></h4>
+				  <h4>Personal Level <small>S</small></h4>
+				  <h4>Position <small>IT Manager</small></h4>	 -->		
+				  <table class="table table-striped">
+				  	
+				  	<tr>
+				  		<td><strong>Name</strong></td>
+				  		<td>:</td>
+				  		<td>{{name}}</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Organization</strong></td>
+				  		<td>:</td>
+				  		<td>QP</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>User ID</strong></td>
+				  		<td>:</td>
+				  		<td>{{userid}}</td>
+				  	</tr>
+
+                    <tr>
+                        <td><strong>Email ID</strong></td>
+                        <td>:</td>
+                        <td>{{email}}</td>
+                    </tr>
+				  	<!-- <tr>
+				  		<td><strong>Password</strong></td>
+				  		<td>:</td>
+				  		<td>Change</td>
+				  	</tr> -->				  	
+				  	<tr>
+				  		<td><strong>Office Phone</strong></td>
+				  		<td>:</td>
+				  		<td>{{officephone}}</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Mobile No</strong></td>
+				  		<td>:</td>
+				  		<td>{{mobileno}}</td>
+				  	</tr>
+				  </table>			   
+				  </div>
+				  <div class="col-lg-5 text-left">
+					 <!-- <h4>Gender <small>M</small></h4>
+				  <h4>Department <small>IT</small></h4>
+				  <h4>Clubs Allowed <small>Dhukhan Recreation Club(DRC)</small></h4>
+				  <h4>Date of Joining <small>1/2/2005</small></h4>
+				  <h4>Date of Renewal<small>1/2/2015</small></h4>
+				  <h4>Date of Renewal<small>1/2/2015</small></h4>			 -->	
+
+				  <table class="table table-striped">				  	
+				  	<tr>
+				  		<td><strong>Role</strong></td>
+				  		<td>:</td>
+				  		<td>{{role}}</td>
+				  	</tr>				  	
+				  	<tr>
+                        <td style="vertical-align: top;"><strong>Clubs Allowed</strong></td>
+                        <td style="vertical-align: top;">:</td>
+                    <td><table>
+                    <thead>
+                </thead>
+                <tbody>
+                    {%for r in clubsallowed %}
+                    <tr> 
+                    <td align="left">{{r}}</td>
+                    </tr>
+                    {%endfor%}                     
+                </tbody>
+                </table>
+                </td>		  	
+				  </table>			
+				  </div>       
+                  </div><br/><br/><br/><br/>	
+                </div>               
+              </div>
+                        </div>
+                        <div id="about" class="tab-pane">
+						
+						<div class="row">
+                            <div class="col-lg-3"> 
+                                </div>
+                            <div class="col-lg-6"> 
+                                <br/><br/>
+                                <form action="/settings/" method="post">
+                                <table class="table table-striped">
+                                    <tr><td>Member ID</td><td><input class="form-control" style="width : 100%"></td> </tr>
+                                </table>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                            </div>
+                            <div class="col-lg-3"> 
+                                </div>
+                        </div>
+						
+						</div>
+                        <div id="profile" class="tab-pane"></div>
+                        <div id="contact" class="tab-pane"></div>
+						 <div id="Others" class="tab-pane"></div>
+                    </div>
+                </div>
+            </section>
+            <!--tab nav start-->
+
+            <!--tab nav start-->
+            
+            <!--tab nav end-->
+
+
+            <!--tab nav start-->
+           
+            <!--tab nav end-->
+
+            <!--navigation start-->
+         
+            <!--navigation end-->
+
+            
+
+           
+
+            
+
+           
+            <!--carousel start-->
+           
+            <!--carousel end-->
+
+            </div>
+
+            </div>
+
+
+        </section>
+    </section>
+    <!--main content end-->
+<!--right sidebar start-->
+<div class="right-sidebar">
+<div class="search-row">
+    <input type="text" placeholder="Search" class="form-control">
+</div>
+<ul class="right-side-accordion">
+<li class="widget-collapsible">
+    <a href="#" class="head widget-head red-bg active clearfix">
+        <span class="pull-left">E-CLUB</span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+            <div class="prog-row side-mini-stat clearfix">
+                <div class="side-graph-info">
+                    <h4>Total Members</h4>
+                   <p>{{count}}</p>
+                </div>
+                <div class="side-mini-graph">
+                    <div class="target-sell">
+                    </div>
+                </div>
+            </div>
+            <div class="prog-row side-mini-stat">
+                <div class="side-graph-info">
+                    <h4>qp</h4>
+                    <p>56
+                        
+                    </p>
+                </div>
+                <div class="side-mini-graph">
+                    <div class="p-delivery">
+                        <div class="sparkline" data-type="bar" data-resize="true" data-height="30" data-width="90%" data-bar-color="#39b7ab" data-bar-width="5" data-data="[200,135,667,333,526,996,564,123,890,564,455]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prog-row side-mini-stat">
+                <div class="side-graph-info payment-info">
+                    <h4>Non QP</h4>
+                    <p>
+                        56
+                    </p>
+                </div>
+                <div class="side-mini-graph">
+                    <div class="p-collection">
+						<span class="pc-epie-chart" data-percent="45">
+						<span class="percent"></span>
+						</span>
+                    </div>
+                </div>
+            </div>
+            <div class="prog-row side-mini-stat">
+                <div class="side-graph-info">
+                    <h4>Total Clubs</h4>
+                    <p>
+                        65
+                    </p>
+                </div>
+                <div class="side-mini-graph">
+                    <div class="d-pending">
+                    </div>
+                </div>
+            </div>
+            <div class="prog-row side-mini-stat">
+                <div class="col-md-12">
+                    <h4>Approval Pending</h4>
+                    <p>
+                       {{pending_members}}
+                    </p>
+                    <div class="progress progress-xs mtop10">
+                        <div style="width: 50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                            <span class="sr-only">50% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="prog-row side-mini-stat">
+                <div class="col-md-12">
+                    <h4>New Members</h4>
+                    <p>
+                       {{new_members}}
+                    </p>
+                    <div class="progress progress-xs mtop10">
+                        <div style="width: 50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
+                            <span class="sr-only">50% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+			
+        </li>
+    </ul>
+</li>
+<li class="widget-collapsible">
+    <a href="#" class="head widget-head terques-bg active clearfix">
+        <span class="pull-left">contact online (5)</span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+            <div class="prog-row">
+                <div class="user-thumb">
+                    <a href="#"><img src="images/avatar1_small.jpg" alt=""></a>
+                </div>
+                <div class="user-details">
+                    <h4><a href="#">e - club 1</a></h4>
+                    <p>
+                        Work for fun
+                    </p>
+                </div>
+                <div class="user-status text-danger">
+                    <i class="fa fa-comments-o"></i>
+                </div>
+            </div>
+            <div class="prog-row">
+                <div class="user-thumb">
+                    <a href="#"><img src="images/avatar1.jpg" alt=""></a>
+                </div>
+                <div class="user-details">
+                    <h4><a href="#">e - club 2</a></h4>
+                    <p>
+                        Available
+                    </p>
+                </div>
+                <div class="user-status text-success">
+                    <i class="fa fa-comments-o"></i>
+                </div>
+            </div>
+            <div class="prog-row">
+                <div class="user-thumb">
+                    <a href="#"><img src="images/chat-avatar2.jpg" alt=""></a>
+                </div>
+                <div class="user-details">
+                    <h4><a href="#">e - club 3</a></h4>
+                    <p>
+                        Away from Desk
+                    </p>
+                </div>
+                <div class="user-status text-warning">
+                    <i class="fa fa-comments-o"></i>
+                </div>
+            </div>
+            <div class="prog-row">
+                <div class="user-thumb">
+                    <a href="#"><img src="images/avatar1_small.jpg" alt=""></a>
+                </div>
+                <div class="user-details">
+                    <h4><a href="#">e - club 4</a></h4>
+                    <p>
+                        working
+                    </p>
+                </div>
+                <div class="user-status text-info">
+                    <i class="fa fa-comments-o"></i>
+                </div>
+            </div>
+            <div class="prog-row">
+                <div class="user-thumb">
+                    <a href="#"><img src="images/avatar1.jpg" alt=""></a>
+                </div>
+                <div class="user-details">
+                    <h4><a href="#">e - club 5</a></h4>
+                    <p>
+                        Work for fun
+                    </p>
+                </div>
+                <div class="user-status text-danger">
+                    <i class="fa fa-comments-o"></i>
+                </div>
+            </div>
+            <p class="text-center">
+                <a href="#" class="view-btn">View all Contacts</a>
+            </p>
+        </li>
+    </ul>
+</li>
+<li class="widget-collapsible">
+    <a href="#" class="head widget-head purple-bg active">
+        <span class="pull-left"> recent activity (3)</span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        just now
+                    </p>
+                    <p>
+                        <a href="#">E- Club</a>Purchased new equipments for zonal office setup
+                    </p>
+                </div>
+            </div>
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        2 min ago
+                    </p>
+                    <p>
+                        <a href="#">E-club </a>Purchased new equipments for zonal office setup
+                    </p>
+                </div>
+            </div>
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        1 day ago
+                    </p>
+                    <p>
+                        <a href="#">E-club</a>Purchased new equipments for zonal office setup
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+
+</ul>
+</div>
+<!--right sidebar end-->
+</section>
+<!-- Placed js at the end of the document so the pages load faster -->
+<!--Core js-->
+
+<!--script for this page-->
+<script>
+function popitup(url) {
+    newwindow=window.open(url,'{{title}}','height=500,width=700');
+    if (window.focus) {newwindow.focus()}
+    return false;
+}
+
+</script>
+{% endblock content %}

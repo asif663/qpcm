@@ -1,0 +1,36 @@
+1. First install Django-1.4 through Virtual Env.
+
+2. Install MySQL Server
+
+3. Then install following modules using pip
+
+reportlab==2.5
+
+xlwt==0.7.5
+
+json==2.0.9
+
+djcelery==3.1.16
+
+xlrd==0.9.3
+
+mysql-python
+
+gunicorn
+
+4. Create a project using 'django-admin.py startproject qpcm'
+
+5. Then you can see qpcm folder at your current directory, replace that directory with the folder which we provided.
+
+6. After that move into qpcm directory using 'cd qpcm'
+
+7. There execute the following commands
+
+python manage.py syncdb
+
+python manage.py collectstatic
+
+python manage.py runserver
+
+8. Incase of any queries refer this link "http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/
+

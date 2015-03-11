@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>E-Club Membership Management System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">E-Club Membership Management System</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li><a href="/index/"> Dashboard</a></li>
+            <li class="active"><a href="/members/"> Members</a></li>
+            <li><a href="/reports/"> Reporting</a></li>
+            <li><a href="/users/"> Users</a></li>
+            <li><a> Settings</a></li>
+            <li><a> Signout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+      <div id="page-wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <div class="bs-example">
+              <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                <li class="active"><a href="#profile" data-toggle="tab">View Profile</a></li>
+                <li><a href="#approve-membership" data-toggle="tab">Approve Membership</a></li>
+                <li><a href="#update-membership" data-toggle="tab">Update Membership</a></li>
+                <li><a href="#renew-membership" data-toggle="tab">Renew Membership</a></li>
+                <li><a href="#suspend-membership" data-toggle="tab">Suspend Membership</a></li>
+                                
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="profile">
+                  <div class="col-lg-13">
+				  <div class="row">
+
+				  <div class="col-lg-3 text-center">
+				  <img src="people.jpg" height="100px" width="100px"><br/><br/><br/><br/>
+
+					<button type="submit" class="btn btn-default">Family</button><br/><br/><br/><br/>
+					<button type="submit" class="btn btn-default">Print Card</button>           
+				  </div>
+				  <div class="col-lg-4 text-left">
+				  <!-- <h4>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small class="text-right">Mohammed</small></h4>
+				  <h4>Organization &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small class="text-right">QP</small></h4>
+				  <h4>Martial Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small class="text-right">Married</small></h4>
+				  <h4>Nationality &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Indian</small></h4>
+				  <h4>Work Location &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Dhukhan</small></h4>
+				  <h4>Office Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>012332112</small></h4>
+				  <h4>Mobile No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>1234123</small></h4>
+				  <h4>Personal Level <small>S</small></h4>
+				  <h4>Position <small>IT Manager</small></h4>	 -->		
+				  <table>
+				  	
+				  	<tr>
+				  		<td><strong>Name</strong></td>
+				  		<td>:</td>
+				  		<td>Mohammed</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Organization</strong></td>
+				  		<td>:</td>
+				  		<td>QP</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Martial Status</strong></td>
+				  		<td>:</td>
+				  		<td>Married</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Nationality</strong></td>
+				  		<td>:</td>
+				  		<td>Indian</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Work Location</strong></td>
+				  		<td>:</td>
+				  		<td>Dhukhan</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Office Phone</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Mobile No</strong></td>
+				  		<td>:</td>
+				  		<td>012332112</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Personal Level</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Position</strong></td>
+				  		<td>:</td>
+				  		<td>S</td>
+				  	</tr>
+				  	
+				  	
+
+				  </table>				   
+				  </div>
+				  <div class="col-lg-5 text-left">
+					 <!-- <h4>Gender <small>M</small></h4>
+				  <h4>Department <small>IT</small></h4>
+				  <h4>Clubs Allowed <small>Dhukhan Recreation Club(DRC)</small></h4>
+				  <h4>Date of Joining <small>1/2/2005</small></h4>
+				  <h4>Date of Renewal<small>1/2/2015</small></h4>
+				  <h4>Date of Renewal<small>1/2/2015</small></h4>			 -->	
+
+				  <table>
+				  	
+				  	<tr>
+				  		<td><strong>Gender</strong></td>
+				  		<td>:</td>
+				  		<td>M</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Staff ID</strong></td>
+				  		<td>:</td>
+				  		<td>100110</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Department</strong></td>
+				  		<td>:</td>
+				  		<td>IT</td>
+				  	</tr>
+				  	<tr>
+				  		<td style="vertical-align: top;"><strong>Clubs Allowed</strong></td>
+				  		<td style="vertical-align: top;">:</td>
+				  		<td>Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>				  		
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Joining</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2005</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	
+				  	
+				  	
+
+				  </table>					
+				  </div>       
+                  </div><br/><br/><br/><br/><br/><br/>
+				  
+				  <!-- Div for last row -->
+					<div class="row">
+					  <div class="col-lg-2 text-center">
+						<button type="submit" class="btn btn-default">Edit Profile</button>         
+					  </div>
+					  <div class="col-lg-2 text-center">
+						<button type="submit" class="btn btn-default">Renewal</button>           
+					  </div>
+					  <div class="col-lg-2 text-center">
+						<button type="submit" class="btn btn-default">Cancellation</button>           
+					  </div>
+					  <div class="col-lg-6 text-center">
+						<button class="btn btn-danger">Suspend</button>          
+					  </div>
+					</div>
+                </div>
+                
+                
+              </div>
+			  <div class="tab-pane fade" id="approve-membership">
+				<div class="row">
+				  <div class="col-lg-8 text-center">					
+					  <div class="panel-body" style="color: #14AAC7">
+						<center><h2>Approve Membership</h2></center>
+					  </div>					            
+				  </div>
+				</div>
+				<div class="col-lg-2 text-center">
+				  <img src="people.jpg" height="100px" width="100px"><br/><br/><br/><br/>         
+				  </div>
+				<div class="col-lg-4 text-left">
+				
+					<table>
+				  	<tr>
+				  		<td><strong>From Date</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Name</strong></td>
+				  		<td>:</td>
+				  		<td>Mohammed</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Organization</strong></td>
+				  		<td>:</td>
+				  		<td>QP</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Martial Status</strong></td>
+				  		<td>:</td>
+				  		<td>Married</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Nationality</strong></td>
+				  		<td>:</td>
+				  		<td>Indian</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Work Location</strong></td>
+				  		<td>:</td>
+				  		<td>Dhukhan</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Office Phone</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Mobile No</strong></td>
+				  		<td>:</td>
+				  		<td>012332112</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Personal Level</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Position</strong></td>
+				  		<td>:</td>
+				  		<td>S</td>
+				  	</tr>				  	
+				  </table>				   
+				  </div>
+				<div class="col-lg-6 text-left">
+				
+					<table>
+				  	<tr>
+				  		<td><strong>To Date</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  		<td><button type="button" class="btn btn-success">Approve</button></td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Gender</strong></td>
+				  		<td>:</td>
+				  		<td>M</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Staff ID</strong></td>
+				  		<td>:</td>
+				  		<td>100110</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Department</strong></td>
+				  		<td>:</td>
+				  		<td>IT</td>
+				  	</tr>
+				  	<tr>
+				  		<td style="vertical-align: top;"><strong>Clubs Allowed</strong></td>
+				  		<td style="vertical-align: top;">:</td>
+				  		<td>Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>				  		
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Joining</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2005</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  </table>					
+				  </div>       
+                  
+                  
+			
+          </div>
+		  <div class="tab-pane fade" id="update-membership">
+             <div class="row">
+				  <div class="col-lg-8 text-center">					
+					  <div class="panel-body" style="color: #14AAC7">
+						<center><h2>User Cancellation</h2></center>
+					  </div>					            
+				  </div>
+				</div>
+				<div class="col-lg-2 text-center">
+				  <img src="people.jpg" height="100px" width="100px"><br/><br/><br/><br/>         
+				  </div>
+				<div class="col-lg-4 text-left">
+				
+					<table>
+				  	<tr>
+				  		<td><strong>From Date</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+					</table>
+					<table>
+					<tr>
+				  		<td><strong>Reason</strong></td>
+				  		
+				  		<td><input class="form-control" style="width : 200%"></td>
+						
+				  	</tr>
+					</table>
+					<br/>
+					<table>
+				  	<tr>
+				  		<td><strong>Name</strong></td>
+				  		<td>:</td>
+				  		<td>Mohammed</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Organization</strong></td>
+				  		<td>:</td>
+				  		<td>QP</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Martial Status</strong></td>
+				  		<td>:</td>
+				  		<td>Married</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Nationality</strong></td>
+				  		<td>:</td>
+				  		<td>Indian</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Work Location</strong></td>
+				  		<td>:</td>
+				  		<td>Dhukhan</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Office Phone</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Mobile No</strong></td>
+				  		<td>:</td>
+				  		<td>012332112</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Personal Level</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Position</strong></td>
+				  		<td>:</td>
+				  		<td>S</td>
+				  	</tr>				  	
+				  </table>				   
+				  </div>
+				<div class="col-lg-6 text-left">
+				
+					<table>
+				  	<tr>
+				  		<td><strong>To Date</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  		
+				  	</tr>
+					<tr>
+						<td><td>
+						<td><button type="button" class="btn btn-danger">Confirm</button></td>
+					</tr>
+					
+					</table>
+					<br/>
+					
+					<table>
+				  	<tr>
+				  		<td><strong>Gender</strong></td>
+				  		<td>:</td>
+				  		<td>M</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Staff ID</strong></td>
+				  		<td>:</td>
+				  		<td>100110</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Department</strong></td>
+				  		<td>:</td>
+				  		<td>IT</td>
+				  	</tr>
+				  	<tr>
+				  		<td style="vertical-align: top;"><strong>Clubs Allowed</strong></td>
+				  		<td style="vertical-align: top;">:</td>
+				  		<td>Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>				  		
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Joining</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2005</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  </table>					
+				  </div>  
+          </div>     
+		  
+		  <div class="tab-pane fade" id="renew-membership">
+			  <div class="row">
+				  <div class="col-lg-8 text-center">					
+					  <div class="panel-body" style="color: #14AAC7">
+						<center><h2>Renew Membership</h2></center>
+					  </div>					            
+				  </div>
+				</div>
+				<div class="col-lg-2 text-center">
+				  <img src="people.jpg" height="100px" width="100px"><br/><br/><br/><br/>         
+				  </div>
+				<div class="col-lg-4 text-left">
+				
+					<table>
+				  	<tr>
+				  		<td><strong>From Date</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Name</strong></td>
+				  		<td>:</td>
+				  		<td>Mohammed</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Organization</strong></td>
+				  		<td>:</td>
+				  		<td>QP</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Martial Status</strong></td>
+				  		<td>:</td>
+				  		<td>Married</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Nationality</strong></td>
+				  		<td>:</td>
+				  		<td>Indian</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Work Location</strong></td>
+				  		<td>:</td>
+				  		<td>Dhukhan</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Office Phone</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Mobile No</strong></td>
+				  		<td>:</td>
+				  		<td>012332112</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Personal Level</strong></td>
+				  		<td>:</td>
+				  		<td>1234123</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Position</strong></td>
+				  		<td>:</td>
+				  		<td>S</td>
+				  	</tr>				  	
+				  </table>				   
+				  </div>
+				<div class="col-lg-6 text-left">
+				
+					<table>
+				  	<tr>
+				  		<td><strong>To Date</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  		<td><button type="button" class="btn btn-success" style = "background-color: #B0B1B0; border-color: #B0B1B0; width : 120px"><font color="black">Confirm</font></button></td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Gender</strong></td>
+				  		<td>:</td>
+				  		<td>M</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Staff ID</strong></td>
+				  		<td>:</td>
+				  		<td>100110</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Department</strong></td>
+				  		<td>:</td>
+				  		<td>IT</td>
+				  	</tr>
+				  	<tr>
+				  		<td style="vertical-align: top;"><strong>Clubs Allowed</strong></td>
+				  		<td style="vertical-align: top;">:</td>
+				  		<td>Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>
+				  		Dhukhan Recreation Club(DRC)<br>				  		
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Joining</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2005</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  	<tr>
+				  		<td><strong>Date of Renewal</strong></td>
+				  		<td>:</td>
+				  		<td>1/2/2015</td>
+				  	</tr>
+				  </table>					
+				  </div>
+		  </div>
+		  <div class="tab-pane fade" id="suspend-membership">
+			  
+		  </div>
+        </div><!-- /.row -->
+        </div><!-- /.row -->
+    </div><!-- /#wrapper -->
+    <!-- JavaScript -->
+    <script src="../static/js/jquery-1.10.2.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/rc.js"></script>
+    
+  </body>
+</html>
